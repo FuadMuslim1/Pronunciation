@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outline of Meetings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: #f7f7f7;
+            padding: 0;
+            margin: 0;
+        }
+
+        /* Container untuk tampilan Mind Map Grid */
+        .mind-map-container {
+            position: relative;
+            /* MODIFIED: 5 columns for desktop */
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            padding: 50px 0;
+        }
+
+        /* Styling dasar untuk setiap node/gelembung pertemuan */
+        .mind-map-node {
+            background-color: #ffffff;
+            border-radius: 9999px; /* Circle shape */
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 3px solid transparent;
+        }
+
+        .mind-map-node:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Node pusat yang membentang di seluruh kolom */
+        .center-node {
+            background-color: #d9534f; /* Main red color */
+            color: white;
+            grid-column: 1 / -1; /* Spans all 5 columns */
+            margin-bottom: 20px;
+            border-radius: 20px;
+            padding: 30px;
+            font-size: 1.5rem;
+            font-weight: 700;
+            box-shadow: 0 8px 25px rgba(217, 83, 79, 0.4);
+        }
+
+        .session-title {
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .session-number {
+            font-size: 1.1rem;
+            font-weight: 800;
+            color: #d9534f; /* Default session red color */
+        }
+        
+        /* Specific styling for meeting status */
+        .node-test { border-color: #f0ad4e; background-color: #fffde0; } /* Test/Yellow */
+        .node-review { border-color: #3b82f6; background-color: #e0f2fe; } /* Review/Blue */
+        .node-exam { border-color: #28a745; background-color: #e9f7ee; } /* Exam/Green */
+
+        .node-test .session-number, .node-test .session-title { color: #855307; }
+        .node-review .session-number, .node-review .session-title { color: #3b82f6; }
+        .node-exam .session-number, .node-exam .session-title { color: #28a745; }
+
+
+        /* Mobile fallback: 2 columns on small screens */
+        @media (max-width: 768px) {
+            .mind-map-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+            .mind-map-node {
+                height: 80px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div class="text-center mb-10">
+        <h1 class="text-4xl font-extrabold text-gray-900">
+            📅 Outline of Meetings
+        </h1>
+        <p class="text-lg text-gray-500 mt-2">
+            Visual map of the 20 learning sessions.
+        </p>
+    </div>
+
+    <div class="grid mind-map-container">
+        
+        <div class="center-node">Outline of 20 Sessions</div> <div class="mind-map-node">
+            <span class="session-number">Meeting 1</span>
+            <span class="session-title">Introduction</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 2</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 3</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 4</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 5</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 6</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 7</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 8</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 9</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 10</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 11</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 12</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 13</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 14</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 15</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node node-test">
+            <span class="session-number">Meeting 16</span>
+            <span class="session-title font-bold">Simulation Test</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 17</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node">
+            <span class="session-number">Meeting 18</span>
+            <span class="session-title">Session</span>
+        </div>
+        <div class="mind-map-node node-review">
+            <span class="session-number">Meeting 19</span>
+            <span class="session-title font-bold">Final Review</span>
+        </div>
+        <div class="mind-map-node node-exam">
+            <span class="session-number">Meeting 20</span>
+            <span class="session-title font-bold">The Examination</span>
+        </div>
+    </div>
+    
+    <div class="text-center pt-8">
+        <a href="index.html" class="inline-block py-3 px-8 bg-gray-500 text-white font-bold rounded-full shadow-lg hover:bg-gray-700 transition duration-300">
+            ← Back to Home
+        </a>
+    </div>
+</div>
+</body>
+</html>

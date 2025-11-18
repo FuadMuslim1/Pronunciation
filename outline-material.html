@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learning English Geuwat | Modules</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using Inter font for a clean look */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+        /* Custom styles for card hover effect */
+        .module-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .module-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        /* Ensures the container for the mind map is relatively positioned */
+        .mind-map-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 800px; 
+            position: relative;
+            overflow: hidden; 
+        }
+        
+        /* Specific sizing for the bubbles to fit better */
+        .mind-map-bubble {
+            width: 150px; 
+            height: 150px; 
+        }
+        
+        /* The center node is slightly larger */
+        .mind-map-center-node {
+            width: 200px; 
+            height: 200px; 
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-blue': '#3B82F6',
+                        'soft-orange': '#FDBA74',
+                        'soft-blue': '#93C5FD',
+                        'soft-yellow': '#FCD34D',
+                        'soft-purple': '#A78BFA',
+                        'soft-green': '#A7F3D0',
+                        'soft-red': '#FCA5A5',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-extrabold text-primary-blue tracking-tight"> 
+                Learning English Geuwat 🎤
+            </h1>
+            <nav class="hidden md:flex space-x-6">
+                <a href="index.html" class="text-gray-600 hover:text-primary-blue transition duration-150 font-semibold">🏠 Home</a> <a href="#modules" class="text-gray-600 hover:text-primary-blue transition duration-150">Main Modules</a>
+            </nav>
+            <a href="index.html" class="md:hidden text-primary-blue font-bold">🏠</a>
+        </div>
+    </header>
+
+    <section id="modules" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-5xl font-extrabold text-primary-blue mb-2">
+                    Pronunciation
+                </h2>
+                <h3 class="text-3xl font-bold text-gray-900 mb-4">
+                    The Outline of Material
+                </h3>
+                <p class="text-lg text-gray-500">
+                    A visual breakdown of the nine core elements we will master.
+                </p>
+            </div>
+            
+            <div class="hidden md:flex mind-map-container">
+                <div class="absolute mind-map-center-node bg-gray-200 p-6 rounded-full shadow-2xl flex flex-col justify-center items-center text-center border-4 border-primary-blue/50 z-20 
+                    top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <svg class="w-12 h-12 mb-2 text-primary-blue" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18V9M3 17a1 1 0 011-1h3.4a1 1 0 01.7.3l2.6 3.6a1 1 0 001.6 0l2.6-3.6a1 1 0 01.7-.3H20a1 1 0 011 1v4a1 1 0 01-1 1h-7M5 12a1 1 0 11-2 0 1 1 0 012 0zm14 0a1 1 0 11-2 0 1 1 0 012 0zM12 7a5 5 0 00-5 5v1a5 5 0 0010 0v-1a5 5 0 00-5-5z"></path>
+                    </svg>
+                    <h4 class="text-xl font-extrabold text-gray-900">Learning Pronunciation</h4>
+                </div>
+
+                <div class="absolute module-card mind-map-bubble bg-soft-orange p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 top-16 left-16">
+                    <h4 class="text-lg font-bold text-gray-800">Vowels</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">/iː/ in 'sheep' vs. /ɪ/ in 'ship'.</p>
+                </div>
+                
+                <div class="absolute module-card mind-map-bubble bg-soft-blue p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 top-1/2 -translate-y-1/2 left-8">
+                    <h4 class="text-lg font-bold text-gray-800">Consonants</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">/$\theta$/ in 'thin' vs. /$\eth$/ in 'this'.</p>
+                </div>
+                
+                <div class="absolute module-card mind-map-bubble bg-soft-yellow p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 bottom-16 left-16">
+                    <h4 class="text-lg font-bold text-gray-800">Word Stressing</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">'PREsent' vs. 'preSENT'.</p>
+                </div>
+
+                <div class="absolute module-card mind-map-bubble bg-soft-red p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 top-16 right-16">
+                    <h4 class="text-lg font-bold text-gray-800">Final S/ES</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">'cats' (/s/), 'dogs' (/z/).</p>
+                </div>
+                
+                <div class="absolute module-card mind-map-bubble bg-soft-green p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 top-1/2 -translate-y-1/2 right-8">
+                    <h4 class="text-lg font-bold text-gray-800">Final D/ED</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">'looked' (/t/), 'played' (/d/).</p>
+                </div>
+                
+                <div class="absolute module-card mind-map-bubble bg-blue-400 p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center text-white z-10 bottom-16 right-16">
+                    <h4 class="text-lg font-bold">American T</h4>
+                    <p class="text-xs mt-1 font-semibold">'water' (pronounced 'wader').</p>
+                </div>
+
+                <div class="absolute module-card mind-map-bubble bg-soft-purple p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 top-8 left-1/2 -translate-x-1/2">
+                    <h4 class="text-lg font-bold text-gray-800">Intonation</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">Rising pitch for questions.</p>
+                </div>
+                
+                <div class="absolute module-card mind-map-bubble bg-yellow-300 p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 bottom-8 left-1/3 -translate-x-1/2">
+                    <h4 class="text-lg font-bold text-gray-800">Linking</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">'An apple' -> 'a-napple'.</p>
+                </div>
+                
+                <div class="absolute module-card mind-map-bubble bg-pink-300 p-4 rounded-full shadow-lg flex flex-col justify-center items-center text-center z-10 bottom-8 right-1/3 translate-x-1/2">
+                    <h4 class="text-lg font-bold text-gray-800">Contractions</h4>
+                    <p class="text-xs text-gray-700 mt-1 font-semibold">'I would have' -> 'I'd've'.</p>
+                </div>
+            </div>
+            
+            <div class="md:hidden grid grid-cols-1 gap-6">
+                
+                <div class="module-card bg-soft-orange p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Vowels</h4>
+                    <p class="text-gray-700">Learn the difference between short and long vowels, and the correct tongue position to produce accurate vowel sounds. <span class="font-semibold block mt-1">Example: /iː/ in 'sheep' vs. /ɪ/ in 'ship'.</span></p>
+                </div>
+
+                <div class="module-card bg-soft-blue p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Consonants</h4>
+                    <p class="text-gray-700">Focus on consonant sounds often mispronounced. Includes voiced and voiceless pairs. <span class="font-semibold block mt-1">Example: /$\theta$/ in 'thin' vs. /$\eth$/ in 'this'.</span></p>
+                </div>
+                
+                <div class="module-card bg-soft-yellow p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Word Stressing</h4>
+                    <p class="text-gray-700">Identify which syllable should be stressed. Correct stress changes the word's meaning and class. <span class="font-semibold block mt-1">Example: 'PREsent' (gift) vs. 'preSENT' (give).</span></p>
+                </div>
+                
+                <div class="module-card bg-soft-purple p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Intonation</h4>
+                    <p class="text-gray-700">Learn the rising and falling rhythm (pitch) in sentences, crucial for conveying emotion and the meaning of questions or statements. <span class="font-semibold block mt-1">Example: Rising pitch for 'Are you coming?'</span></p>
+                </div>
+                
+                <div class="module-card bg-soft-red p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Final S/ES Sound</h4>
+                    <p class="text-gray-700">Master the three ways to pronounce 's' or 'es' at the end of a word: /s/, /z/, or /$\text{IZ}$/. Essential for plurals and third-person singular verbs. <span class="font-semibold block mt-1">Example: 'cats' (/s/), 'dogs' (/z/), 'kisses' (/$\text{IZ}$/).</span></p>
+                </div>
+
+                <div class="module-card bg-soft-green p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Final D/ED Sound</h4>
+                    <p class="text-gray-700">Learn when the 'ed' ending is pronounced /t/, /d/, or /$\text{ID}$/. Key to speaking past tense correctly. <span class="font-semibold block mt-1">Example: 'looked' (/t/), 'played' (/d/), 'wanted' (/$\text{ID}$/).</span></p>
+                </div>
+                
+                <div class="module-card bg-blue-400 p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-white mb-2">American T</h4>
+                    <p class="text-white">Understand the 'Flap T' (like a soft 'D' sound) and the 'Glottal Stop' when the letter 'T' is between vowels or in certain positions. <span class="font-semibold block mt-1">Example: 'water' (pronounced 'wader').</span></p>
+                </div>
+
+                <div class="module-card bg-pink-300 p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Contractions</h4>
+                    <p class="text-gray-700">Learn how to pronounce common contractions like "I'm," "don't," and "you're" to sound more natural and fluent. <span class="font-semibold block mt-1">Example: 'I would have' becomes 'I'd've' or 'I woulda'.</span></p>
+                </div>
+
+                <div class="module-card bg-yellow-300 p-6 rounded-xl shadow-lg">
+                    <h4 class="text-2xl font-bold text-gray-800 mb-2">Linking (Link Up)</h4>
+                    <p class="text-gray-700">The technique of connecting two words, for example 'pick up' becoming 'pi-cup'. Makes spoken English flow more smoothly. <span class="font-semibold block mt-1">Example: 'An apple' (pronounced 'a-napple').</span></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+        <a href="index.html" class="block w-full text-center py-4 bg-gray-600 text-white font-bold rounded-xl shadow-lg hover:bg-gray-700 transition duration-300 ease-in-out">
+            ⬅️ Back to Main Home </a>
+    </div>
+
+    <footer class="bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 Pro-Nunciation. All Rights Reserved.</p>
+            <p class="text-sm mt-2">Built upon the best pronunciation learning framework.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
